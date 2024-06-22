@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = 'c4dcdf93fe3f4bbebe79426b00e9f1e9';
+const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
 const BASE_URL = 'https://newsapi.org/v2';
 
 export const fetchNews = async ({ category = '', page = 1, query = '' }) => {
