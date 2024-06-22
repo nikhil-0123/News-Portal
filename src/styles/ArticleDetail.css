@@ -1,0 +1,35 @@
+.article-detail {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--header-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article-detail h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.article-detail img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.article-detail p {
+  line-height: 1.6;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

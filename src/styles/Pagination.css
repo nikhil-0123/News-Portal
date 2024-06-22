@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.page-link {
+  margin: 0 5px;
+  padding: 10px 20px;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  border: 1px solid var(--header-text-color);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.page-link:hover {
+  background-color: var(--header-text-color);
+  color: var(--header-bg-color);
+}

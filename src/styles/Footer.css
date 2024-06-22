@@ -1,0 +1,12 @@
+.footer {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  border-top: 1px solid var(--header-text-color);
+}
+
+.footer p {
+  margin: 0;
+}
