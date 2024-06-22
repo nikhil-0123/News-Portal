@@ -13,7 +13,11 @@ export const fetchNews = async ({ category = '', page = 1, query = '' } = {}) =>
       ? `${BASE_URL}/everything?q=${query}&page=${page}&apiKey=${API_KEY}`
       : `${BASE_URL}/top-headlines?country=us&category=${category}&page=${page}&apiKey=${API_KEY}`;
 
-    const response = await axios.get(url);
+    const response = await axios.get(url, {
+      headers: {
+        'Upgrade-Insecure-Requests': 1
+      }
+    });
 
     if (response.data.status !== 'ok') {
       throw new Error(response.data.message);
@@ -21,7 +25,7 @@ export const fetchNews = async ({ category = '', page = 1, query = '' } = {}) =>
 
     return response.data;
   } catch (error) {
-    console.error('Error fetching news:', error.message);
+    console.error('Error fetching news:', error.response ? error.response.data : error.message);
     throw error;
   }
 };
